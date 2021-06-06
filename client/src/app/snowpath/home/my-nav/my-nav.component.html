@@ -1,0 +1,48 @@
+<nav class="my-nav un">
+  <section class="section-top">
+    <span class="find pointer">Find or start a conversation</span>
+  </section>
+  <section class="section-mid">
+    <div class="friends pointer" [routerLink]="'/app/home/me'">
+      <span><i class="bi bi-people-fill"></i></span>
+      <span>Friends</span>
+    </div>
+    <div class="add-direct">
+      <span>Direct Message</span>
+      <span class="pointer"><i class="bi bi-plus"></i></span>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" [ngSwitch]="states[item.person.uid]"
+        *ngFor="let item of directs | orderBy: 'lastUpdated': 'true'" (click)="goToChat(item.person.uid)">
+        <span class="dp-wrapper">
+          <span class="dp">
+            <img [src]="item.person.imageUrl || 'assets/img/default-dp.png'" alt="">
+          </span>
+          <span class="status-icon online" *ngSwitchCase="'ONLINE'"></span>
+          <span class="status-icon" *ngSwitchDefault></span>
+        </span>
+        <span class="user-detail">
+          <span class="name">{{item.person.name}}</span>
+          <span class="status">{{status[states[item.person.uid]] || 'Offline'}}</span>
+        </span>
+      </li>
+    </ul>
+  </section>
+  <section class="section-bottom">
+    <span class="dp-wrapper">
+      <span class="dp">
+        <img [src]="account.imageUrl || 'assets/img/default-dp.png'" alt="">
+      </span>
+      <span class="status-icon"></span>
+    </span>
+    <span class="user-detail">
+      <span class="name">{{account.name}}</span>
+      <span class="status">{{account.userId}}</span>
+    </span>
+    <span class="icon pointer" [matMenuTriggerFor]="aboveMenu"><i class="bi bi-gear"></i></span>
+    <mat-menu #aboveMenu="matMenu" yPosition="above">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item (click)="logout()">Logout</button>
+    </mat-menu>
+  </section>
+</nav>

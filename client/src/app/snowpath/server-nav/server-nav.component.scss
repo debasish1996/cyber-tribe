@@ -1,0 +1,47 @@
+.server-nav {
+  height: 100vh;
+  width: var(--server-width);
+  background-color: var(--dark);
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .action {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    transition: .3s;
+    background: var(--mid-dark);
+    color: var(--theme);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    cursor: pointer;
+
+    &:hover {
+      border-radius: 1rem;
+      color: var(--light);
+      background: var(--theme);
+    }
+  }
+
+  .home-logo {
+    background: var(--mid-dark);
+    padding: 4px;
+  }
+
+  .divider {
+    border-bottom: 3px solid var(--mid-dark);
+    height: 0;
+    width: 50%;
+    margin: 0.5rem 0 0.5rem 25%;
+  }
+
+  .public {
+    font-size: 20px;
+    margin-top: .5rem;
+  }
+}

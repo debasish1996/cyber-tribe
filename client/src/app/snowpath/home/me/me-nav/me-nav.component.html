@@ -1,0 +1,20 @@
+<nav>
+  <span class="mr-0"><i class="bi bi-people-fill"></i></span>
+  <span class="bold active ml-0">Friends</span>
+  <span class="divider"></span>
+  <span class="menu-item" [ngClass]="{active: active == item}" *ngFor="let item of navList" (click)="changeNav(item)">
+    {{item}}
+    <app-marker *ngIf="item == navMenu.PENDING && isPendingDirty"></app-marker>
+  </span>
+  <span class="add pointer" [ngClass]="{active: active == navMenu.ADD_FRIEND}" (click)="changeNav(navMenu.ADD_FRIEND)">
+    {{navMenu.ADD_FRIEND}}
+  </span>
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="resetContact()">Reset contact</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+  <span class="spacer"></span>
+  <span class="new-g" [style]="{ position: 'relative'}"><i class="bi bi-chat-left-fill"></i> <i class="bi bi-plus"
+      [style]="{ position: 'absolute', top: '-10px', right: '-3px'}"></i></span>
+</nav>

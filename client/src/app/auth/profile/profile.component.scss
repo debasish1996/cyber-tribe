@@ -1,0 +1,82 @@
+.profile {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--mid-dark);
+  color: var(--light);
+  overflow: auto;
+
+  .icon {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+
+    i {
+      background: var(--dark);
+      transition: .2s;
+
+      &:hover {
+        color: var(--danger);
+      }
+    }
+  }
+
+  .img-container {
+    .img-wrapper {
+      width: 10rem;
+      height: 10rem;
+      border: .5rem solid var(--theme);
+      border-radius: 50%;
+      font-size: 80px;
+      background: var(--light-mid);
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        position: absolute;
+      }
+    }
+  }
+
+  .profile-name {
+    input {
+      padding: 5px 10px;
+      width: 14rem;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+
+      &:focus {
+        box-shadow: 0 0 5px var(--theme);
+      }
+    }
+  }
+
+  .done-btn {
+    color: var(--light);
+    background: var(--theme);
+    position: relative;
+    transition: .2s;
+
+    i {
+      position: absolute;
+      left: 10px;
+
+      &::before {
+        transform: scaleX(0);
+        transition: .2s;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      padding-left: 30px;
+
+      i {
+        &::before {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}

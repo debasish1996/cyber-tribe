@@ -1,0 +1,33 @@
+<section class="app-pannel">
+  <app-me-nav [(active)]="activeNav" [isPendingDirty]="isPendingDirty"></app-me-nav>
+  <div class="list-wrapper scrollbar">
+    <div *ngIf="activeNav != menu.ADD_FRIEND" [ngSwitch]="activeNav">
+      <div *ngSwitchCase="menu.ONLINE">
+        <p class="active-menu un">{{activeNav}} - {{onlineList.length}}</p>
+        <app-friend-list [friendList]="onlineList" [activeNav]="activeNav"></app-friend-list>
+      </div>
+      <div *ngSwitchCase="menu.ALL">
+        <p class="active-menu un">{{activeNav}} - {{allList.length}}</p>
+        <app-friend-list [friendList]="allList" [activeNav]="activeNav"></app-friend-list>
+      </div>
+      <div *ngSwitchCase="menu.PENDING">
+        <p class="active-menu un">{{activeNav}} - {{pendingList.length}}</p>
+        <app-friend-list [friendList]="pendingList" [activeNav]="activeNav"></app-friend-list>
+      </div>
+      <div *ngSwitchCase="menu.BLOCKED">
+        <p class="active-menu un">{{activeNav}} - {{blockedList.length}}</p>
+        <app-friend-list [friendList]="blockedList" [activeNav]="activeNav"></app-friend-list>
+      </div>
+    </div>
+    <div class="add-friend mt-3" *ngIf="activeNav == menu.ADD_FRIEND">
+      <h5>{{menu.ADD_FRIEND}}</h5>
+      <p>You can add a friend with their User Id (#000000)</p>
+      <div class="input-wrapper">
+        <input type="text" placeholder="Enter a user id - #000000" (keyup)="$event.keyCode == 13 && sendFriendReq()"
+          #userIdInput>
+        <button class="btn btn-success" (click)="sendFriendReq()">Send
+          Friend Request</button>
+      </div>
+    </div>
+  </div>
+</section>

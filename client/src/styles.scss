@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --darker: #0e1e2f !important;
+  --dark: #202225 !important;
+  --dark2: #292b2f !important;
+  --mid-dark: #2f3136 !important;
+  --mid: #36393f !important;
+  --light-mid: #3e4249 !important;
+  --mute: #777 !important;
+  --light-mute: #aaa !important;
+  --theme: #00adb5 !important;
+  --theme-opac: #00adb54d !important;
+  --light: #eeeeee !important;
+  --danger: #fc6e6e !important;
+  --server-width: 4.5rem;
+  --main-nav-width: 15rem;
+  --top-nav-height: 48px;
+  --sendbox-height: 65px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.un {
+  user-select: none;
+}
+
+.scrollbar {
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, .35);
+    border-radius: 10px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.icon i {
+  display: flex;
+  background: var(--mid-dark);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.status-offline.status-offline {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--mute);
+  border: 3px solid var(--mid);
+  padding: 0;
+  margin: 0;
+}
+
+.white {
+  color: var(--light);
+}

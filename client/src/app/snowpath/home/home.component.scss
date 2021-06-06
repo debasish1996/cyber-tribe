@@ -1,0 +1,5 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: calc(var(--main-nav-width) + var(--server-width));
+}

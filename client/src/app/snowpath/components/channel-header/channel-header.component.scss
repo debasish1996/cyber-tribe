@@ -1,0 +1,36 @@
+nav {
+  height: var(--top-nav-height);
+  width: 100%;
+  color: var(--light-mute);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+
+  .online {
+    background: rgb(36, 243, 115);
+  }
+}
+
+span {
+  margin: 0 10px;
+  padding: 2px 8px;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.dp {
+  position: relative;
+  overflow: hidden;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 50%;
+
+  img {
+    width: 100%;
+  }
+}

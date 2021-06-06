@@ -1,0 +1,13 @@
+diff --git a/backend/todo.js b/backend/todo.js
+deleted file mode 100644
+index 7eebaa7..0000000
+--- a/backend/todo.js
++++ /dev/null
+@@ -1,6 +0,0 @@
+-/**
+- * TODO: 
+- * 
+- * 1) create SSE connection.
+- * 2) restructure contact model.
+- */
+\ No newline at end of file

@@ -1,0 +1,28 @@
+<div class="login-container">
+  <div class="background"></div>
+  <div class="login-form">
+    <div class="sign-in-section">
+      <h1>Sign Up</h1>
+      <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+        <div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Enter Your Email" formControlName="email" required />
+          </div>
+          <div class="form-field">
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Password" formControlName="password" pattern=".{8,}"
+              required />
+            <small id="passwordHelpInline" class="text-muted">
+              Must be 8-20 characters long.
+            </small>
+          </div>
+          <div class="form-field action">
+            <h2 class="pointer" (click)="goToLogin()">Log in.</h2>
+            <input type="submit" class="btn btn-signin" value="Create" [disabled]="!signupForm.valid" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

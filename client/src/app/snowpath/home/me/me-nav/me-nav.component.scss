@@ -1,0 +1,50 @@
+nav {
+  height: var(--top-nav-height);
+  width: 100%;
+  color: var(--light-mute);
+  padding: 10px;
+  display: flex;
+}
+
+span {
+  margin: 0 10px;
+  padding: 2px 8px;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.divider {
+  padding: 0;
+  width: 1px;
+  background: var(--light-mute);
+}
+
+.active {
+  color: var(--light);
+}
+
+.menu-item {
+  cursor: pointer;
+  position: relative;
+
+  &.active,
+  &:hover {
+    background: var(--light-mid);
+  }
+}
+
+.add {
+  background: var(--theme);
+  color: var(--light);
+}
+
+.add {
+  &.active {
+    background: var(--theme-opac);
+    color: var(--theme);
+  }
+}

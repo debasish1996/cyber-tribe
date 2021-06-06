@@ -1,0 +1,11 @@
+.loader-background {
+  background-color: var(--darker);
+
+  .loader {
+    background-image: url('https://i.pinimg.com/originals/e9/29/1e/e9291eaddacd460280a34a151dcc5cc4.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+  }
+}

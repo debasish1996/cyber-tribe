@@ -1,0 +1,54 @@
+.app-pannel {
+  width: calc(100vw - (var(--main-nav-width) + var(--server-width)));
+  height: 100vh;
+  background: var(--mid);
+}
+
+.list-wrapper {
+  border-top: 1px solid var(--dark);
+  padding: 0 30px 20px 30px;
+  height: calc(100vh - var(--top-nav-height));
+  overflow: hidden scroll;
+}
+
+.active-menu {
+  border-bottom: 1px solid var(--light-mid);
+  padding-left: 20px;
+  margin-top: 15px;
+  margin-bottom: -0;
+  padding-bottom: 4px;
+  color: var(--light-mute);
+}
+
+.add-friend {
+  h5 {
+    color: var(--light);
+    font-weight: 700;
+    font-size: 115%;
+  }
+
+  p {
+    color: var(--light-mute);
+  }
+
+  .input-wrapper {
+    position: relative;
+    display: inline-block;
+
+    input {
+      width: 35rem;
+      background: var(--mid-dark);
+      border: 1px solid var(--dark);
+      outline: none;
+      padding: 15px 15rem 15px 20px;
+      color: var(--light-mute);
+      border-radius: 5px;
+    }
+
+    button {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+    }
+  }
+}

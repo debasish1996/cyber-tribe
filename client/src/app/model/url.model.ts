@@ -1,0 +1,16 @@
+export enum URLs {
+  SIGN_UP = 'api/auth/signup',
+  LOG_IN = 'api/auth/login',
+  LOG_OUT = 'api/auth/logout',
+  USER_STATE = 'api/auth/state',
+  PROFILE = 'api/user',
+  ME = 'api/user/me',
+  CONTACTS = 'api/contacts',
+  FRIEND_REQ = 'api/contacts/request',
+  ACCEPT_FRIEND_REQ = 'api/contacts/accept',
+  CONTACT_UPDATES = 'api/contacts/updates',
+  CONVERSATIONS = 'api/conversations',
+  DIRECTS = 'api/conversations/directs',
+  MESSAGES = 'api/conversations/messages',
+  MESSAGES_UPDATES = 'api/conversations/messages/updates',
+}
